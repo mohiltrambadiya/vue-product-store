@@ -11,7 +11,6 @@ async function getProductDetail() {
 
     let apiUrl = `https://api.escuelajs.co/api/v1/products/${route.params.id}`
     await axios.get(apiUrl).then((res) => {
-        console.log(res.data);
         if(res.status == 200) {
             productData.value = res.data;
         }
